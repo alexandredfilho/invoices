@@ -9,6 +9,10 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+/node_modules
+/log/*.log
+/config/master.key
+.env
 
 # Used by dotenv library to load environment variables.
 # .env
