@@ -1,29 +1,41 @@
 <p id="notice"><%= notice %></p>
+<br>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Showing Product</h3>
+      </div>
+      <div class=card-body>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Name:</label>
+          <%= text_field_tag nil, @user.name, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Email:</label>
+          <%= text_field_tag nil, @user.email, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Phone:</label>
+          <%= text_field_tag nil, @user.phone, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Kind:</label>
+          <%= text_field_tag nil, @user.kind %>
+        </div>
 
-<p>
-  <strong>Kind:</strong>
-  <%= @user.kind %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Status:</label>
+          <%= text_field_tag nil, @user.status %>
+        </div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @user.status %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_user_path(@user), class:"btn btn-info" %>
+        <%= link_to 'Back', users_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
