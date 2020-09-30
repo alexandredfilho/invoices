@@ -1,71 +1,81 @@
 <p id="notice"><%= notice %></p>
+<br>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Showing Costumer Details</h3>
+      </div>
+      <div class=card-body>
+        <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Name:</label>
+            <%= text_field_tag nil, @customer.name, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-<h2>Customer Details</h2>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Company name:</label>
+            <%= text_field_tag nil, @customer.company_name, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @customer.name %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Document:</label>
+            <%= text_field_tag nil, @customer.document, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Company name:</strong>
-    <%= @customer.company_name %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Email:</label>
+            <%= text_field_tag nil, @customer.email, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Document:</strong>
-    <%= @customer.document %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Phone:</label>
+            <%= text_field_tag nil, @customer.phone, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= @customer.email %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Status:</label>
+            <%= text_field_tag nil, @customer.status, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Phone:</strong>
-    <%= @customer.phone %>
-  </p>
+        <h2>Address</h2>
 
-  <p>
-    <strong>Status:</strong>
-    <%= @customer.status %>
-  </p>
+        <% @customer.addresses.each do |addresses| %>
 
-<h2>Address</h2>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Country:</label>
+              <%= text_field_tag nil, addresses.country, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-<% @customer.addresses.each do |addresses| %>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">State:</label>
+              <%= text_field_tag nil, addresses.state, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Country:</strong>
-      <%= addresses.country %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">City:</label>
+              <%= text_field_tag nil, addresses.city, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>State:</strong>
-      <%= addresses.state %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Neighborhood:</label>
+              <%= text_field_tag nil, addresses.neighborhood, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>City:</strong>
-      <%= addresses.city %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Street:</label>
+              <%= text_field_tag nil, addresses.street, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
 
-  <p>
-    <strong>Neighborhood:</strong>
-      <%= addresses.neighborhood %>
-  </p>
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Number:</label>
+              <%= text_field_tag nil, addresses.number, class:"form-control", id:"readOnlyInput", readonly:"" %>
+          </div>
+        <% end %>
 
-  <p>
-    <strong>Street:</strong>
-      <%= addresses.street %>
-  </p>
-
-  <p>
-    <strong>Number:</strong>
-      <%= addresses.number %>
-  </p>
-<% end %>
-
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+        <div class="card-footer">
+          <%= link_to 'Edit', edit_customer_path(@customer), class:"btn btn-info" %>
+          <%= link_to 'Back', customers_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

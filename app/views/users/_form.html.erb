@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :name %></label>
+    <%= form.text_field :name, class:"form-control", placeholder:"Name XPTO..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :email %></label>
+    <%= form.text_field :email, class:"form-control", placeholder:"user@user.com" %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :phone %></label>
+    <%= form.text_field :phone, class:"form-control", placeholder:"xx (00) 0000-0000" %>
   </div>
 
-  <div class="field">
-    <%= form.label :kind %>
-    <%= form.select :kind, User.kinds.keys %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :kind %></label>
+    <%= form.select :kind, User.kinds.keys, class:"custom-select" %>
   </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.select :status, User.statuses.keys %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :status %></label>
+    <%= form.select :status, User.statuses.keys, {:class => 'custom-select'} %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-success btn-sm" %>
   </div>
 <% end %>

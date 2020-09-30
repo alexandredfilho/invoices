@@ -1,6 +1,17 @@
-<h1>Editing customer</h1>
-
-<%= render 'form', customer: @customer %>
-
-<%= link_to 'Show', @customer %> |
-<%= link_to 'Back', customers_path %>
+<br>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Editing Customer</h3>
+      </div>
+      <div class=card-body>
+        <%= render 'form', customer: @customer %>
+      </div>
+      <div class=card-footer>
+        <%= link_to 'Show', @customer, class:"btn btn-info"  %>
+        <%= link_to 'Back', customers_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

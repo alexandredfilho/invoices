@@ -11,12 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :description %></label>
+    <%= form.text_field :description, class:"form-control", placeholder:"Category XPTO..."  %>
   </div>
 
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-success btn-sm" %>
   </div>
 <% end %>

@@ -11,27 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :product_id %>
-    <%= form.text_field :product_id %>
+  <div class="form-group">
+   <label class="col-form-label" for="inputDefault"><%= form.label :product_id %></label>
+    <%= form.text_field :product_id, class:"form-control", placeholder:"Product XPTO..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :customer_id %>
-    <%= form.text_field :customer_id %>
+  <div class="form-group">
+    <label class="col-form-label" for="inputDefault"><%= form.label :customer_id %></label>
+    <%= form.text_field :customer_id, class:"form-control", placeholder:"Customer XPTO..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :quantity %>
-    <%= form.text_field :quantity %>
+  <div class="form-group">
+    <div class="col-4 invoice-col">
+    <label class="col-form-label" for="inputDefault"><%= form.label :quantity %></label>
+      <%= form.text_field :quantity, class:"form-control", placeholder:"10" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :Total %>
-    <%= form.text_field :Total %>
+  <div class="form-group">
+    <fieldset>
+      <div class="col-4 invoice-col">
+        <label class="col-form-label" for="readOnlyInput"><%= form.label :Total %></label>
+        <%= form.text_field :Total, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
+    </fieldset>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-success btn-sm" %>
   </div>
 <% end %>

@@ -11,34 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :name %></label>
+    <%= form.text_field :name, class:"form-control", placeholder:"Name XPTO..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :company_name %>
-    <%= form.text_field :company_name %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :company_name %></label>
+    <%= form.text_field :company_name, class:"form-control", placeholder:"Company XPTO..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :document %>
-    <%= form.text_field :document %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :document %></label>
+    <%= form.text_field :document, class:"form-control", placeholder:"CNPJ, CPF..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :email %></label>
+    <%= form.text_field :email, class:"form-control", placeholder:"customer@customer.com..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :phone %></label>
+    <%= form.text_field :phone, class:"form-control", placeholder:"xx (00) 0000-0000" %>
   </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.select :status, Customer.statuses.keys %>
+  <div class="form-field">
+    <label class="col-form-label" for="inputDefault"><%= form.label :status %></label>
+    <%= form.select :status, Customer.statuses.keys, class:"form-control" %>
   </div>
 
 <h2>Address</h2>
@@ -47,38 +47,38 @@
 
 
     <div class="form-field">
-      <%= address_form.label :country %>
-      <%= address_form.text_field :country %>
+      <label class="col-form-label" for="inputDefault"><%= address_form.label :country %></label>
+      <%= address_form.text_field :country, class:"form-control", placeholder:"País XPTO" %>
     </div>
 
     <div class="form-field">
-      <%= address_form.label :state %>
-      <%= address_form.text_field :state %>
+      <label class="col-form-label" for="inputDefault"><%= address_form.label :state %></label>
+      <%= address_form.text_field :state, class:"form-control", placeholder:"Estado XPTO" %>
     </div>
 
     <div class="form-field">
-      <%= address_form.label :city %>
-      <%= address_form.text_field :city %>
+      <label class="col-form-label" for="inputDefault"><%= address_form.label :city %></label>
+      <%= address_form.text_field :city, class:"form-control", placeholder:"Cidade XPTO" %>
     </div>
 
     <div class="form-field">
-      <%= address_form.label :neighborhood %>
-      <%= address_form.text_field :neighborhood %>
+      <label class="col-form-label" for="inputDefault"><%= address_form.label :neighborhood %></label>
+      <%= address_form.text_field :neighborhood, class:"form-control", placeholder:"Bairo XPTO" %>
     </div>
     <div class="form-field">
-      <%= address_form.label :street %>
-      <%= address_form.text_field :street %>
+      <label class="col-form-label" for="inputDefault"><%= address_form.label :street %></label>
+      <%= address_form.text_field :street, class:"form-control", placeholder:"Rua XPTO..." %>
     </div>
 
     <div class="form-field">
-      <%= address_form.label :number %>
-      <%= address_form.text_field :number %>
+      <label class="col-form-label" for="inputDefault"><%= address_form.label :number %></label>
+      <%= address_form.text_field :number, class:"form-control", placeholder:"Number XPTO..." %>
     </div>
 
   <% end %>
 
-
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-success btn-sm" %>
   </div>
 <% end %>

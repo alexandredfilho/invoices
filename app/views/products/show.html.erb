@@ -1,29 +1,41 @@
 <p id="notice"><%= notice %></p>
+<br>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Showing Product</h3>
+      </div>
+      <div class=card-body>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Name:</label>
+          <%= text_field_tag nil, @product.name, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Details:</label>
+          <%= text_field_tag nil, @product.details, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
 
-<p>
-  <strong>Details:</strong>
-  <%= @product.details %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Price:</label>
+          <%= text_field_tag nil, @product.price, class:"form-control", id:"readOnlyInput", readonly:"" %>
+        </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+        <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Category:</label>
+            <%= text_field_tag @product.category.try :description %>
+        </div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category.try :description %>
-</p>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Status:</label>
+          <%= text_field_tag @product.status %>
+        </div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @product.status %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+        <div class="card-footer">
+        <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-info" %>
+        <%= link_to 'Back', products_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,24 +1,35 @@
 <p id="notice"><%= notice %></p>
+<br>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Show Invoices</h3>
+      </div>
+      <div class=card-body>
+      <p>
+        <strong>Product:</strong>
+        <%= @invoice.product_id %>
+      </p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @invoice.product_id %>
-</p>
+      <p>
+        <strong>Customer:</strong>
+        <%= @invoice.customer_id %>
+      </p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @invoice.customer_id %>
-</p>
+      <p>
+        <strong>Quantity:</strong>
+        <%= @invoice.quantity %>
+      </p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @invoice.quantity %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @invoice.Total %>
-</p>
-
-<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
-<%= link_to 'Back', invoices_path %>
+      <p>
+        <strong>Total:</strong>
+        <%= @invoice.Total %>
+      </p>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_invoice_path(@invoice), class:"btn btn-info" %> |
+        <%= link_to 'Back', invoices_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
