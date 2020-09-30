@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<br>
+
 <div class="row justify-content-center">
   <div class="col-md-8 col-md-offset-2">
     <div class="card">
@@ -7,27 +7,28 @@
         <h3 class="card-title">Show Invoices</h3>
       </div>
       <div class=card-body>
-      <p>
-        <strong>Date:</strong>
-        <%= @invoice.date %>
-      </p>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Date:</strong>
+          <%= text_field_tag nil, @invoice.date, class:"form-control", id:"readOnlyInput", readonly:"" %>
+      </div>
 
-      <p>
-        <strong>Customer:</strong>
-        <%= @invoice.customer %>
-      </p>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Customer:</strong>
+          <%= text_field_tag nil, @invoice.customer, class:"form-control", id:"readOnlyInput", readonly:"" %>
+      </div>
 
-      <p>
-        <strong>Tax:</strong>
-        <%= @invoice.tax %>
-      </p>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Tax:</strong>
+          <%= text_field_tag nil, @invoice.tax, class:"form-control", id:"readOnlyInput", readonly:"" %>
+      </div>
 
-      <p>
-        <strong>Salesperson:</strong>
-        <%= @invoice.Salesperson %>
-      </p>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Salesperson:</strong>
+          <%= text_field_tag nil, @invoice.salesperson, class:"form-control", id:"readOnlyInput", readonly:"" %>
+      </div>
+
       <div class="card-footer">
-        <%= link_to 'Edit', edit_invoice_path(@invoice), class:"btn btn-info" %> |
+        <%= link_to 'Edit', edit_invoice_path(@invoice), class:"btn btn-info" %>
         <%= link_to 'Back', invoices_path, class:"btn btn-primary" %>
       </div>
     </div>
