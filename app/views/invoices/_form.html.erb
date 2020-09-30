@@ -12,29 +12,27 @@
   <% end %>
 
   <div class="form-group">
-   <label class="col-form-label" for="inputDefault"><%= form.label :product_id %></label>
-    <%= form.text_field :product_id, class:"form-control", placeholder:"Product XPTO..." %>
+    <label class="col-form-label" for="inputDefault"><%= form.label :date %></label>
+    <%= form.date_field :date, id:"datepicker" %>
   </div>
 
   <div class="form-group">
-    <label class="col-form-label" for="inputDefault"><%= form.label :customer_id %></label>
-    <%= form.text_field :customer_id, class:"form-control", placeholder:"Customer XPTO..." %>
+    <label class="col-form-label" for="inputDefault"><%= form.label :customer %></label>
+    <%= form.text_field :customer, class:"form-control", placeholder:"Customer XPTO..." %>
   </div>
 
   <div class="form-group">
-    <div class="col-4 invoice-col">
-    <label class="col-form-label" for="inputDefault"><%= form.label :quantity %></label>
-      <%= form.text_field :quantity, class:"form-control", placeholder:"10" %>
+    <div class="col-2">
+    <label class="col-form-label" for="inputDefault"><%= form.label :tax %></label>
+      <%= form.text_field :tax, class:"form-control", placeholder:"5.0" %>
     </div>
   </div>
 
   <div class="form-group">
-    <fieldset>
-      <div class="col-4 invoice-col">
-        <label class="col-form-label" for="readOnlyInput"><%= form.label :Total %></label>
-        <%= form.text_field :Total, class:"form-control", id:"readOnlyInput", readonly:"" %>
+      <div class="col-4">
+        <label class="col-form-label" for="inputDefault"><%= form.label :salesperson %></label>
+        <%= form.text_field :salesperson, class:"form-control" %>
         </div>
-    </fieldset>
   </div>
 
   <div class="actions">

@@ -5,6 +5,7 @@
 import '../stylesheets/application'
 import 'bootstrap/dist/js/bootstrap'
 import 'popper.js/dist/popper'
+import 'bootstrap-datepicker/dist/js/bootstrap-datepicker'
 
 require("@rails/ujs").start()
 require("turbolinks").start()

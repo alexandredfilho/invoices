@@ -8,23 +8,23 @@
       </div>
       <div class=card-body>
       <p>
-        <strong>Product:</strong>
-        <%= @invoice.product_id %>
+        <strong>Date:</strong>
+        <%= @invoice.date %>
       </p>
 
       <p>
         <strong>Customer:</strong>
-        <%= @invoice.customer_id %>
+        <%= @invoice.customer %>
       </p>
 
       <p>
-        <strong>Quantity:</strong>
-        <%= @invoice.quantity %>
+        <strong>Tax:</strong>
+        <%= @invoice.tax %>
       </p>
 
       <p>
-        <strong>Total:</strong>
-        <%= @invoice.Total %>
+        <strong>Salesperson:</strong>
+        <%= @invoice.Salesperson %>
       </p>
       <div class="card-footer">
         <%= link_to 'Edit', edit_invoice_path(@invoice), class:"btn btn-info" %> |

@@ -14,11 +14,11 @@ class InvoicesTest < ApplicationSystemTestCase
     visit invoices_url
     click_on "New Invoice"
 
-    fill_in "Total", with: @invoice.Total
-    fill_in "Customer", with: @invoice.customer_id
-    fill_in "Product", with: @invoice.product_id
-    fill_in "Quantity", with: @invoice.quantity
-    fill_in "User", with: @invoice.user_id
+    fill_in "Date", with: @invoice.date
+    fill_in "Customer", with: @invoice.customer
+    fill_in "Tax", with: @invoice.tax
+    fill_in "Salesperson", with: @invoice.salesperson
+
     click_on "Create Invoice"
 
     assert_text "Invoice was successfully created"
@@ -29,11 +29,10 @@ class InvoicesTest < ApplicationSystemTestCase
     visit invoices_url
     click_on "Edit", match: :first
 
-    fill_in "Total", with: @invoice.Total
-    fill_in "Customer", with: @invoice.customer_id
-    fill_in "Product", with: @invoice.product_id
-    fill_in "Quantity", with: @invoice.quantity
-    fill_in "User", with: @invoice.user_id
+    fill_in "Date", with: @invoice.date
+    fill_in "Customer", with: @invoice.customer
+    fill_in "Tax", with: @invoice.tax
+    fill_in "Salesperson", with: @invoice.salesperson
     click_on "Update Invoice"
 
     assert_text "Invoice was successfully updated"
