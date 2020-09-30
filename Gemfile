@@ -22,12 +22,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# gem Action View
-gem "actionview", ">= 5.2.4.3"
-gem "actionpack", ">= 5.2.4.3"
-gem "activestorage", ">= 5.2.4.3"
-gem "activesupport", ">= 5.2.4.3"
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
